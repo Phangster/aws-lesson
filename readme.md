@@ -1,6 +1,13 @@
-Fork and Clone this repository.
+AWS Primer 
+------
 
-Register for free-tier AWS account.
+We will try our hand at deploying to AWS. More specifically create a RDS and an EC2 instance.
+
+Pre-requisuites:
+
+--* Register for ree-tier AWS account.
+--* Download and install either Postico or pgAdmin.
+--* WSL or a terminal program if you are running windows.
 
 We will set-up an AWS RDS instance first.
 
