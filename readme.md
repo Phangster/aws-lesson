@@ -33,21 +33,18 @@ Specifies the computational power, memory & storages allocated to the instance.
 Multi AZ deployment - Creates replicas in a different Availability Zone (AZ) to provide data redundancy, eliminate I/O freezes, and minimize latency spikes during system backups.
 
 Storage type - 
-General purpose SSD (do i need to explain this?)
+General purpose SSD
+	VS
+Provisioned IOPS, suitable for I/O-intensive database workloads. Provides flexibility to provision I/O ranging from 1,000 - 30,000 IOPS (InputOutput PerSecond).
 
-Provisioned IOPS suitable for I/O-intensive database workloads. Provides flexibility to provision I/O ranging from 1,000 to 30,000 IOPS.
-IOPS InputOutput Per Second.
-
-In non-production enviroments, Just select 'Only enable options eligible for free-tier'
-You don't want to get a bill shock, because you do need to key in your credit card info to get started.
-
-DB instance id - project4
-
-master username - username
-master password - password
+DB instance id - Used to identify your instances, NOT your DB name!
+Master username & password - Master creditentials, don't forget this.
 
 ```
-Advance settings :
+#####Attention!
+In non-production enviroments, Just select `Only enable options eligible for free-tier`. You don't want to get a bill shock, because you do need to key in your credit card info to get started.
+
+#####Advance settings :
 Use defaults
 
 You will not be able to select the afforability zones in the free tier,
@@ -59,7 +56,7 @@ Create instance and wait.
 
 Check Instance- status
 
-Mac Users - Postico
+sMac Users - Postico
 pgAdmin
 
 For the purpose of testing and development, we would need to edit the security group settings.
