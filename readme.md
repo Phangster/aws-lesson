@@ -5,12 +5,12 @@ We will try our hand at deploying to AWS. More specifically create a RDS (Relati
 
 You will use the RDS service to create a DB instance. A DB instance is an isolated database environment in the cloud, it can contain multiple user-created databases, and you can access it by using the same tools and applications that you use with a stand-alone database instance.
 
-Amazon Elastic Compute Cloud (EC2) allows users to rent virtual computers on which to run their own computer applications. EC2 encourages scalable deployment of applications by providing a web service through which a user can boot an Amazon Machine Image (AMI) to configure a virtual machine, which Amazon calls an "instance", containing any software desired, e.g NodeJS express app. 
+EC2 allows users to rent virtual computers on which to run their own computer applications. It encourages scalable deployment of applications by providing a web service through which a user can boot an Amazon Machine Image (AMI) to configure a virtual machine, which Amazon calls an "instance", containing any software desired, e.g NodeJS express app. 
 
 Prerequisites
 ------
 
-* Register for ree-tier AWS account.
+* Register for free-tier AWS account.
 * Download and install either Postico or pgAdmin.
 * WSL or a terminal program if you are running windows.
 
@@ -56,7 +56,7 @@ Create instance and wait.
 
 Check Instance- status
 
-sMac Users - Postico
+Mac Users - Postico
 pgAdmin
 
 For the purpose of testing and development, we would need to edit the security group settings.
