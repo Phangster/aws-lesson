@@ -44,24 +44,21 @@ DB instance id - Used to identify your instances, NOT your DB name!
 Master username & password - Master creditentials, don't forget this.
 
 ```
-##### Attention!
+### Attention!
 In non-production enviroments, Just select `Only enable options eligible for free-tier`. You don't want to get a bill shock, because you do need to key in your credit card info to get started.
 
-##### Advance settings :
-Use defaults
+### Advance settings :
+#### Use defaults
 
 You will not be able to select the afforability zones in the free tier,
-But naturally in production enviroments, if you're in SG you'll want to have your instance deployed in SG
+But naturally in production enviroments, if you're in SG you'll want to have your instance deployed in SG.
 
-DB name = Project4
+3. Enter your Database Name
 
-Create instance and wait.
+4. Create instance and wait.
 
-Check Instance- status
+5. Check Instance status - If instance is done initializing, you will be able to get the endpoint url and connect to it with either Postico or pgAdmin.
 
-Mac Users - Postico
-pgAdmin
+For the purpose of testing and development, we would need to edit the security group settings. Look up the instance details, click on `Security Groups`
 
-For the purpose of testing and development, we would need to edit the security group settings.
-notice the name lanuch wizard. let the inbound and outbound to be anywhere.
-
+Set the inbound and outbound traffice to accept from  `Anywhere`.
