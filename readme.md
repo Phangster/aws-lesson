@@ -10,9 +10,9 @@ Amazon Elastic Compute Cloud (EC2) allows users to rent virtual computers on whi
 Prerequisites
 ------
 
-⋅⋅* Register for ree-tier AWS account.
-⋅⋅* Download and install either Postico or pgAdmin.
-⋅⋅* WSL or a terminal program if you are running windows.
+* Register for ree-tier AWS account.
+* Download and install either Postico or pgAdmin.
+* WSL or a terminal program if you are running windows.
 
 We will set-up an AWS RDS instance first.
 
@@ -26,7 +26,7 @@ For the purpose of this app we will create a postgreSQL database.
 Select Dev/Test for the free tier usage.
 
 Configs :
-``
+```
 Instance class - 
 Specifies the computational power, memory & storages allocated to the instance.
 
@@ -46,7 +46,7 @@ DB instance id - project4
 master username - username
 master password - password
 
-``
+```
 Advance settings :
 Use defaults
 
