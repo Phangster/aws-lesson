@@ -98,6 +98,7 @@ Check your app installs with:
 #### Start your app.
 
 1. Git clone this repo onto your server.
+2. NPM install express and pg
 2. Enter your PG configs - You can use ` nano index.js ` if you need a text editor.
 3. Because we are running the server on port 80, we need to execute the app as a super user so : ` sudo node index.js `
 
