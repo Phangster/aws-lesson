@@ -69,28 +69,60 @@ Set the inbound and outbound traffice to accept from  `Anywhere`.
 EC2 :
 ------
 1. Select EC2 from services in your management console.
-2. Launch an instance.
-3. Select Ubuntu 16.04 LTS server
-4. Select the most best instance available to you in the free tier.
-5. Configure instance details : Use defaults to avoid any additional charges.
-6. Configure storage: Specify as much as you need to. Up to 30gigs for free tier.
-7. Skip adding tags. (Tags are just meta data for your instances)
-8. Security group - Make sure you enable port 22 to accept traffice from anywhere. and also add a HTTP rule at port 80 to accept traffic from anywhere.
-9. Click launch and proceed to create key value pair. Download the Key file and launch. Wait for your instance to be created.
-10. Locate your key file and change permissions of the file by using this command. Change the filename to match. 
-`chmod 0400 .ssh/my_private_key.pem`
+2. Launch an instance. Select Ubuntu 16.04 LTS server Image.
+3. Select the most powerful instance available to you in the free tier.
+4. Configure instance details : Use defaults to avoid any additional charges.
+5. Configure storage: Specify as much as you need to. Up to 30gigs for free tier.
+6. Skip adding tags. (Tags are just meta data for your instances)
+7. Security group - Make sure you enable port 22 to accept traffice from anywhere. and also add a HTTP rule at port 80 to accept traffic from anywhere.
+8. Click launch and proceed to create key value pair. Download the Key file and launch. Wait for your instance to be created.
+9. Locate your key file and change permissions of the file by using this command. Change the filename to match. 
 
-11. SSH into your Linux instance using its Public DNS:
-`ssh -i "ec2demo.pem" ubuntu@ec2-18-222-141-32.us-east-2.compute.amazonaws.com`
+` chmod 0400 .ssh/ec2demo.pem`
+
+10. SSH into your Linux instance using its Public DNS:
+
+` ssh -i "ec2demo.pem" ubuntu@ec2-18-222-141-32.us-east-2.compute.amazonaws.com`
 
 ### HOORAY! 
 
 Now lets install Node and get our server running
+
 `sudo apt-get update && sudo apt-get upgrade`
+
 `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
+
 `sudo apt-get install -y nodejs`
 
-Enter your PG configs and sudo node index.js
 
-PM2 blah blah blah. Done.
+Check your app installs with: 
+`node -v`
 
+`git -v`
+
+#### Start your app.
+
+1. Git clone this repo onto your server.
+2. Enter your PG configs - You can use ` nano index.js ` if you need a text editor.
+
+3. Because we are running the server on port 80, we need to execute the app as a super user so : ` sudo node index.js `
+
+FIN.
+
+Useful commands in the linux enviroment:
+```
+To send the process to the background:
+	sudo node index.js &
+
+To list processes running:
+	ps -a
+
+To ALL list processes running:
+	ps aux
+
+Another process visualisation:
+	top
+
+To terminate processes: 
+	kill -9 [pid]
+```
